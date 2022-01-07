@@ -1,16 +1,4 @@
 import styled from "styled-components";
-import { makeStyles } from "@material-ui/core";
-
-export const useStyles = makeStyles({
-  keypad: {
-    background: '#262834',
-    color: 'white',
-    margin: '5px',
-    fontSize: '1.2rem',
-    fontWeight: '500'
-  }
-})
-
 
 export const Main = styled.main`
   position: absolute;
@@ -23,15 +11,17 @@ export const Main = styled.main`
 
 export const Container = styled.div`
   margin: auto;
+  background: '#262834';
   width: 300px;
-  height: 400px;
-  border: 12px solid black;
+  height: 420px;
+  border: 10px solid black;
   border-radius: 8px;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
 `
 
 export const Screen = styled.input`
+  width: 300px;
   grid-row: 1/2;
   background: black;
   color: white;
@@ -39,8 +29,11 @@ export const Screen = styled.input`
   border: none;
 `
 export const Keyboard = styled.div`
+  width: 100%;
   background: black;
   grid-row: 2/6;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 22.5%);
+  justify-content: center;
+  grid-gap: 2%;
 `

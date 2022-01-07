@@ -4,15 +4,14 @@ import
   Main, 
   Container,
   Screen,
-  Keyboard,
-  useStyles
+  Keyboard
 } from './styles'
 import keys from "./data";
 import { Button } from '@material-ui/core'
 
 function App() {
   const [result, setResult] = useState('teste')
-  const classes = useStyles()
+
   return (
     <Main>
       <Container>
@@ -21,14 +20,20 @@ function App() {
         </Screen>
         <Keyboard>
           { keys.map((key, index) => {
-            console.log(key.id)
+            const { id, background, color, pad } = key
             return (
               <Button
                 variant="contained"
-                id={ key.id }
-                className={classes.keypad}
+                id={ id }
+                style={{
+                  background: `${background ? background : '#262834'}`,
+                  fontSize: '1.1rem',
+                  fontWeight: '500',
+                  color: `${color ? color : 'white'}`,
+                  
+                }}
               >
-                { key.pad }
+                { pad }
               </Button>
             );
           })}
