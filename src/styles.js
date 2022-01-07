@@ -11,7 +11,7 @@ export const Main = styled.main`
 
 export const Container = styled.div`
   margin: auto;
-  background: '#262834';
+  background: black;
   width: 300px;
   height: 420px;
   border: 10px solid black;
@@ -21,7 +21,11 @@ export const Container = styled.div`
 `
 
 export const Screen = styled.input`
-  width: 300px;
+  margin: auto;
+  width: 280px;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
   grid-row: 1/2;
   background: black;
   color: white;

@@ -10,7 +10,7 @@ import keys from "./data";
 import { Button } from '@material-ui/core'
 
 function App() {
-  const [result, setResult] = useState('teste')
+  const [result, setResult] = useState('8 + 2')
 
   return (
     <Main>
